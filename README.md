@@ -1,6 +1,6 @@
-
 # Bash scripts 
-## Useful for SysAds and DevOps
+Useful for SysAds and DevOps
+
 * [adduser.sh](adduser.sh): Script to add a user.
 * [backup-files.sh](backup-files.sh): Compresses a dir for backups with appended date.
 * [det-running-proc.sh](det-running-proc.sh): Determines the status of a running process.
