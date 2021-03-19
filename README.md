@@ -1,4 +1,4 @@
-# Bash Shell Scripts 
+# Bash Shell Scripts [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/erwynesantos)
 Useful for SysAds and DevOps
 
 * [adduser.sh](adduser.sh): Script to add a user.
