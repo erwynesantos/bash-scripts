@@ -1,4 +1,4 @@
-# Bash scripts 
+# Bash Shell Scripts 
 Useful for SysAds and DevOps
 
 * [adduser.sh](adduser.sh): Script to add a user.
