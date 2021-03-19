@@ -51,4 +51,6 @@ find . -type f -newermt June-01-2020 ! -newermt October-01-2020 -ls |  awk -F " 
 
 # Find files in the given time range inside the current directory, list them and print the filesizes only in bytes (7th column), sum them and print in Gigabytes
 find . -type f -newermt June-01-2020 ! -newermt October-01-2020 -ls |  awk -F " " '{print$7}' | awk '{ SUM += $1} END { print SUM }' | awk '{print $1/1024/1024/1024 " GB "}'
-#----------------------------------------------------------------------------------------------------------------------------------------------
+
+# Find files in the dir newer than Feb 28, 2021 but not newer than March 10, 2021 and then copy those to AWS S3 bucket
+find ./planned_outage* -newermt "2021-02-28 00:00:00" ! -newermt "2021-03-10 00:00:00" -exec aws s3 cp {} s3://dpa-prod-archive --profile prd_to_stg ';'
