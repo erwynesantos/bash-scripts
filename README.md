@@ -1,6 +1,8 @@
-# Bash Shell Scripts [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/erwynesantos)
-Useful for SysAds and DevOps
+# <div align="center"> Bash Shell Scripts [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/erwynesantos) </div>
+<p align="center"> <img src="https://thumbs.gfycat.com/FloweryPowerfulDrafthorse-size_restricted.gif" </p>
 
+---
+## Script Description
 * [adduser.sh](adduser.sh): Script to add a user.
 * [backup-files.sh](backup-files.sh): Compresses a dir for backups with appended date.
 * [det-running-proc.sh](det-running-proc.sh): Determines the status of a running process.
