@@ -1,5 +1,4 @@
 #! /bin/bash
-# Checks used space on filesystems and reports any over specified percentage
 
 # Warn when percentage used space reaches max:
 max="95"
