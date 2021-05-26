@@ -12,3 +12,4 @@
 * [mv-dailycontactfiles-to-efs.sh](mv-dailycontactfiles-to-efs.sh): Moves specific files to EFS (AWS Elastic Block Storage) but ignores if they already exist in EFS.
 * [positional-parameters.sh](positional-parameters.sh): Sample script to run with parameters/flags.
 * [while-for-function.sh](while-for-function.sh): Sample template for while, for and functions.
+* [aws-copy-files-from-s3.sh](aws-copy-files-from-s3.sh): Backups files periodically (cron) from server to AWS S3 bucket if those files exist.
