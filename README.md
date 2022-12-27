@@ -13,3 +13,4 @@
 * [positional-parameters.sh](positional-parameters.sh): Sample script to run with parameters/flags.
 * [while-for-function.sh](while-for-function.sh): Sample template for while, for and functions.
 * [aws-copy-files-from-s3.sh](aws-copy-files-from-s3.sh): Backups files periodically (cron) from server to AWS S3 bucket if those files exist.
+* [multiapi-ping-slack.sh](multiapi-ping-slack.sh): Pings multiple APIs/hosts and sends a slack notification.
