@@ -1,13 +1,12 @@
-# Located in /home/erwsantos/shellscripts/pingbot-v2.1.0.sh @ this server
-# Updated as of Dec 27, 2022 17:55 PHT to v2.1.0
-
 #!/bin/bash
+# Updated as of Dec 29, 2022 19:23 EST to v2.1.1
+# Fixed bug in retry() as it used to not jump to the else condition when specific APIs were reachable again.
 
-# --------------------------- Variable Definition goes here -------------------------- #
 offlog=failed_api.log # Log location
-api=(host1.com api2.example.com 192.168.1.1 127.0.0.1) 
-SLACK_WEBHOOK_URL=https://hooks.slack.com/services/this-is-not/a-real/web-hook
-SLACK_CHANNEL=slack-channel
+api=(google.com 192.168.1.1 127.0.0.1 youtube.com)
+SLACK_WEBHOOK_URL=https://hooks.slack.com/services/not/real/webhook
+SLACK_CHANNEL=server-notification
+#SLACK_CHANNEL=alertmanager_test # Test channel
 
 # ----------------- 'Slack notification' function declaration goes here -------------- #
 # Slack color support: good    = green
@@ -17,7 +16,7 @@ SLACK_CHANNEL=slack-channel
 
 msg_author="PingBot"
 msg_pretext="_Reaching APIs..._"
-botpic=https://bot-logo.com/logo.png # Upload thumbnail picture on an image hosting service.
+botpic=https://i.ibb.co/h2zfyx6/wonders-logo.png # Needs to be updated by June 27, 2023
 
 send_notification(){
   message="payload={\"channel\": \"#$SLACK_CHANNEL\",\"attachments\":[{\"author_icon\":\"$botpic\",\"author_name\":\"$msg_author\",\"pretext\":\"$msg_pretext\",\"color\":\"$1\",\"text\":\"$2\"}]}"
@@ -75,13 +74,13 @@ retry(){
         scanPing | grep 'down' > $offlog # >-- changes here
         sleep 1
 
-if [ -s $log ]; then
+if [ -s $offlog ]; then
         # The file is not-empty.
         #echo "============================================"
         echo "Critical: These API(s) are still unreachable:  "
         cat $offlog
-        # send_notification 'danger' "These APIs are still unreachable: \n$(cat $log)" # Slack notif
-        #rm $log
+        # send_notification 'danger' "These APIs are still unreachable: \n$(cat $offlog)" # Slack notif
+        #rm $offlog
 else
         echo "============================================"
         echo "         All APIs are back online.          "
