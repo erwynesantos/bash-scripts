@@ -60,6 +60,7 @@ if [ -s $offlog ]; then
         done
           echo "Critical: API(s) listed above are still unreachable after $DURATION seconds."
           send_notification 'danger' "*Critical: API(s) listed are still unreachable after $DURATION seconds.* \n$(cat $offlog)" # Slack notif
+        exit 1
 else
         # The file is empty.
         echo "============================================"
