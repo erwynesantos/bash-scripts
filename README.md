@@ -1,6 +1,5 @@
 # <div align="center"> Bash Shell Scripts [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/erwynesantos) </div>
-[https://thumbs.gfycat.com/FloweryPowerfulDrafthorse-size_restricted.gif](https://media.tenor.com/vf10mk6H798AAAAC/sudo-rm.gif)
-
+[![Logo](https://thumbs.gfycat.com/FloweryPowerfulDrafthorse-size_restricted.gif)](https://media.tenor.com/vf10mk6H798AAAAC/sudo-rm.gif)
 
 ---
 ## Script Description
